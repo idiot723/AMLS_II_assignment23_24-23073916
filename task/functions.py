@@ -100,7 +100,7 @@ def get_train():
     #load dataset
     train = pd.read_csv("./Dataset/train.csv")
     sns.countplot(x='label', data=train)
-    #plt.savefig("./count.png")
+    plt.savefig("./task/count.png")
 
     #sample data
     label_counts = train["label"].value_counts()
@@ -273,7 +273,7 @@ def plot_accloss():
   accuracy_ax.set_ylabel('Accuracy')
   plt.tight_layout()
   plt.show()
-  #plt.savefig("./task/accloss.png")
+  plt.savefig("./task/accloss.png")
 
 def fill_missing_epochs(df, df_ref):
     for fold in range(5):
@@ -355,7 +355,7 @@ def plot_2accloss(path1,path2,label1,label2,savepath):
   accuracy_ax.legend()
   plt.tight_layout()
   plt.show()
-  #plt.savefig("savepath")
+  plt.savefig("savepath")
 
 class ResNetWithCAM(nn.Module):
     def __init__(self, resnet):
